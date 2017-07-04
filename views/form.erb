@@ -2,14 +2,22 @@
 <h2>Rules:</h2>
 
 
-<form action='/sentence'>
+<form action='/result'>
 <div class="form-group">
-    <label for="sentence">Enter sentence here:</label>
-    <input id="sentence" name="sentence" type="sentence_check">
+    <label for="number">Enter sentence here:</label>
+    <input id="sentence" name="sentence" type="text">
   </div>
   <div class="form-group">
-      <label for="word">Enter word here:</label>
+      <label for="number">Enter word here:</label>
       <input id="word" name="word" type="text">
     </div>
   <button type="submit" class="btn btn-danger">Submit</button>
 </form>
+
+<div class="output">
+  <h2>Results:</h2>
+  <h3><em><strong><%= @word %></strong></em> in <br> <em><strong><%= @sentence %></strong></em><br> has been repeated:</h3>
+
+  <h3 name="result"> <em><strong><%= @result%></strong></em> time(s)</h3>
+  <button type="submit" name="button" class="btn btn submit"> <a href="/">Submit new sentence</a></button>
+</div>

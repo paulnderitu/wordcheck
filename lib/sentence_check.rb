@@ -1,13 +1,15 @@
 class String
-  define_method(:count) do |word|
-    self == self
-    sentence = self.split()
+  define_method(:count) do |word_to_count|
     counter = 0
-    sentence.each() do |list|
-      if list == word
-          counter = counter + 1
+    split = self.split()
+    check = word_to_count
+    split.each() do |word|
+      word_to_count = word.gsub(/[!,@,?,',',*,"",:,;,.]/, "")
+
+      if word.include? check
+          counter += 1
       end
       end
-  counter
+      counter
     end
 end
