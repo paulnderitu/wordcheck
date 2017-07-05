@@ -4,7 +4,7 @@ class String
     split = self.split()
     check = word_to_count
     split.each() do |word|
-      word_to_count = word.gsub(/[!,@,?,',',*,"",:,;,.]/, "")
+    word_to_count = word.gsub(/[!,@,?,',',*,"",:,;,.]/, "")
 
       if word.include? check
           counter += 1
