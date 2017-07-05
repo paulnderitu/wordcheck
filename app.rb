@@ -1,6 +1,5 @@
 require('sinatra')
 require('sinatra/reloader')
-require('descriptive_statistics')
 require('./lib/sentence_check')
 also_reload('lib/**/*.rb')
 
